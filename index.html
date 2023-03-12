@@ -1,12 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <title>HTML, CSS and Git Basics work</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#personal">Personal information</a></li>
+                    <li class="header__item"><a href="#about">About</a></li>
+                    <li class="header__item"><a href="#about">Skills</a></li>
+                    <li class="header__item"><a href="#work">Work experience</a></li>
+                    <li class="header__item"><a href="#work">Education</a></li>
+                    <li class="header__item"><a href="#code">Example of code</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container flex">
+                <h1 class="hero__title">Resume</h1>
+                <img src="img/photo.JPG" alt="Avatar">
+            </div>
+        </section>
+        <section id="personal" class="personal-information">
+            <div class="container">
+                <h2 class="title">Personal information</h2>
+                <h3 class="subtitle">Name</h3>
+                <p class="description">Iana Belousova</p>
+                <h3 class="subtitle">Location</h3>
+                <p class="description">Plzen, Czech Republic</p>
+                <h3 class="subtitle">Contact information</h3>
+                <p class="description">Email: <a
+                        href="mailto:yanabelousova1996@gmail.com">yanabelousova1996@gmail.com</a></p>
+                <p class="description">LinkedIn profil: <a
+                        href="https://www.linkedin.com/in/iana-belousova-753881257">https://www.linkedin.com/in/iana-belousova-753881257</a>
+                </p>
+                <p class="description">GitHub: yanabel1996</p>
+                <p class="description">Telegram: <a href="https://t.me/whitemustache25">https://t.me/whitemustache25</a>
+                </p>
+                <p class="description">Discord: Iana_Belousova#6687</p>
+            </div>
+        </section>
+        <section id="about" class="about-skills">
+            <div class="container">
+                <h2 class="title">Personal information</h2>
+                <h3 class="subtitle">About</h3>
+                <p class="description">I am a committed and responsible person, I love to develop and learn
+                    something new. There are no impossible tasks for me. My goal is to become a successful specialist in
+                    Frontend development. At the moment I have no experience in this field, but I have training
+                    projects.</p>
+                <h3 class="subtitle">Skills</h3>
+                <p class="description">I have good knowledge of HTML, CSS, BEM methodology. I know the basics of
+                    JavaScript, Bootstrap, I know how to use various JS libraries, work with documentation, I know the
+                    Git version control system. I can do simple animation with JavaScript and libraries. Also, I have a
+                    high level of Figma, Photoshop and Tilda.</p>
+            </div>
+        </section>
+        <section id="work" class="work-education">
+            <div class="container">
+                <h2 class="title">Work and education</h2>
+                <h3 class="subtitle">Work experience</h3>
+                <ul class="list">
+                    <li class="item">Landing W-Wave Radio(2023) - training project</li>
+                    <li class="item">Landing Skillbox(2022) - training project</li>
+                    <li class="item">Landing Lionic(2022) - training project</li>
+                    <li class="item">Landing Евклид(2022) - training project</li>
+                    <li class="item">Landing Lagoona(2022) - training project</li>
+                </ul>
+                <h3 class="subtitle">Education</h3>
+                <ul class="list">
+                    <li class="item">USMA 2014-2020гг. - therapist</li>
+                    <li class="item">University of West Bohemia 2021-2024гг. - teacher of Russian as a foreign language
+                    </li>
+                    <li class="item">Skillbox 2020-2023гг. - profession Fullstack designer(HTML, CSS, BEM methodology,
+                        JavaScript, Bootstrap)</li>
+                    <li class="item">Brainnest trainee 2023г. - trainee for Frontend developers</li>
+                </ul>
+                <h3 class="subtitle">Languages</h3>
+                <ul class="list">
+                    <li class="item">English - Upper-Intermediate(B2)</li>
+                    <li class="item">Czech - Intermediate(B1+)</li>
+                    <li class="item">Russian - Native</li>
+                </ul>
+            </div>
+        </section>
+        <section id="code" class="coding">
+            <div class="container">
+                <h2 class="coding__title">Game in the console "Stone, scissors, paper" </h2>
+                <pre>
+                   <code class="coding__code">
+                    function computerPlay() {
+                        let result;
+                        let randomNumber = Math.random();
+                        if (randomNumber &lt;= 0.33) {
+                            result = `Rock`;
+                        } else if (randomNumber &lt;= 0.67) {
+                            result = `Paper`;
+                        } else {
+                            result = `Scissors`;
+                        }
+                        return result;
+                    }
+                    let computerScore = 0;
+                    let playerScore = 0;
+            
+                    function game() {
+                        console.log(`Let's play the game "Rock, Paper, Scissors"!`)
+                        for (let i = 1; i &lt; 6; i++) {
+                            console.log(`---ROUND №${i}---`);
+                            function playRound(playerSelection, computerSelection) {
+                                playerSelection = prompt('Put your choice: Rock, Paper or Scissors?');
+                                computerSelection = computerPlay();
+                                let playerAnswer = playerSelection.toLowerCase();
+                                if (computerSelection === playerAnswer) {
+                                    computerScore++;
+                                    playerScore++;
+                                    return console.log("The friendship won!");
+                                } else if (playerAnswer === `scissors`) {
+                                    if (computerSelection === `Rock`) {
+                                        computerScore++;
+                                        return console.log("You Lose! Rock beats Scissors!");
+                                    } else {
+                                        playerScore++;
+                                        return console.log("You Win! Scissors beats Paper");
+                                    }
+                                } else if (playerAnswer === `rock`) {
+                                    if (computerSelection === `Paper`) {
+                                        computerScore++;
+                                        return console.log("You Lose! Paper beats Rock");
+                                    } else {
+                                        playerScore++;
+                                        return console.log("You Win! Rock beats Scissors");
+                                    }
+                                } else if (playerAnswer === `paper`) {
+                                    if (computerSelection === `Scissors`) {
+                                        computerScore++;
+                                        return console.log("You Lose! Scissors beats Paper");
+                                    } else {
+                                        playerScore++;
+                                        return console.log("You Win! Paper beats Rock");
+                                    }  
+                                }
+                                playerScore;
+                                computerScore;
+                            }
+                            playRound();
+                        }
+                        return console.log(`Game is over! Results: Computer = ${computerScore}, Player = ${playerScore}`);
+                    }
+                </code> 
+                </pre>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <h2 class="subtitle">Contact information</h2>
+                <p class="description">Email: <a
+                        href="mailto:yanabelousova1996@gmail.com">yanabelousova1996@gmail.com</a></p>
+                <p class="description">LinkedIn profil: <a
+                        href="https://www.linkedin.com/in/iana-belousova-753881257">https://www.linkedin.com/in/iana-belousova-753881257</a>
+                </p>
+                <p class="description">GitHub: yanabel1996</p>
+                <p class="description">Telegram: <a href="https://t.me/whitemustache25">https://t.me/whitemustache25</a>
+                </p>
+                <p class="description">Discord: Iana_Belousova#6687</p>
+        </div>
+    </footer>
 </body>
+
 </html>
