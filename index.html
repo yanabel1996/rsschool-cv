@@ -11,9 +11,9 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <nav class="header__nav">
-                <ul class="header__list">
+        <div class="container header__container">
+            <nav class="header__nav flex">
+                <ul class="header__list list-reset flex">
                     <li class="header__item"><a href="#personal">Personal information</a></li>
                     <li class="header__item"><a href="#about">About</a></li>
                     <li class="header__item"><a href="#about">Skills</a></li>
@@ -26,13 +26,16 @@
     </header>
     <main>
         <section class="hero">
-            <div class="container flex">
+            <div class="container flex hero__container">
                 <h1 class="hero__title">Resume</h1>
-                <img src="img/photo.JPG" alt="Avatar">
+                <div class="hero__avatar">
+                    <img class="hero__img" src="img/photo.JPG" alt="Avatar">
+                </div>
+
             </div>
         </section>
         <section id="personal" class="personal-information">
-            <div class="container">
+            <div class="container personal-information__container">
                 <h2 class="title">Personal information</h2>
                 <h3 class="subtitle">Name</h3>
                 <p class="description">Iana Belousova</p>
@@ -51,7 +54,7 @@
             </div>
         </section>
         <section id="about" class="about-skills">
-            <div class="container">
+            <div class="container about-skills__container">
                 <h2 class="title">Personal information</h2>
                 <h3 class="subtitle">About</h3>
                 <p class="description">I am a committed and responsible person, I love to develop and learn
@@ -66,7 +69,7 @@
             </div>
         </section>
         <section id="work" class="work-education">
-            <div class="container">
+            <div class="container work-education__container">
                 <h2 class="title">Work and education</h2>
                 <h3 class="subtitle">Work experience</h3>
                 <ul class="list">
@@ -94,8 +97,8 @@
             </div>
         </section>
         <section id="code" class="coding">
-            <div class="container">
-                <h2 class="coding__title">Game in the console "Stone, scissors, paper" </h2>
+            <div class="container coding__container">
+                <h2 class="title">Game in the console "Stone, scissors, paper" </h2>
                 <pre>
                    <code class="coding__code">
                     function computerPlay() {
@@ -164,17 +167,17 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container">
-            <h2 class="subtitle">Contact information</h2>
-                <p class="description">Email: <a
-                        href="mailto:yanabelousova1996@gmail.com">yanabelousova1996@gmail.com</a></p>
-                <p class="description">LinkedIn profil: <a
-                        href="https://www.linkedin.com/in/iana-belousova-753881257">https://www.linkedin.com/in/iana-belousova-753881257</a>
-                </p>
-                <p class="description">GitHub: yanabel1996</p>
-                <p class="description">Telegram: <a href="https://t.me/whitemustache25">https://t.me/whitemustache25</a>
-                </p>
-                <p class="description">Discord: Iana_Belousova#6687</p>
+        <div class="container footer__container">
+            <h3 class="subtitle subtitle--footer">Contact information</h3>
+            <p class="description description--footer">Email: <a href="mailto:yanabelousova1996@gmail.com">yanabelousova1996@gmail.com</a>
+            </p>
+            <p class="description description--footer">LinkedIn profil: <a
+                    href="https://www.linkedin.com/in/iana-belousova-753881257">https://www.linkedin.com/in/iana-belousova-753881257</a>
+            </p>
+            <p class="description description--footer">GitHub: <span>yanabel1996</span></p>
+            <p class="description description--footer">Telegram: <a href="https://t.me/whitemustache25">https://t.me/whitemustache25</a>
+            </p>
+            <p class="description description--footer">Discord: <span>Iana_Belousova#6687</span></p>
         </div>
     </footer>
 </body>
